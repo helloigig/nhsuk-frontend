@@ -1,5 +1,15 @@
 # NHS.UK frontend Changelog
 
+## 10.7.2 - 4 November 2026
+
+Note: This release was created from the `support/10.x` branch.
+
+### :wrench: **Fixes**
+
+We've made fixes to NHS.UK frontend in the following pull requests:
+
+- [#2183: Apply Canvas colour to menu list border](https://github.com/nhsuk/nhsuk-frontend/pull/2183)
+
 ## 10.7.1 - 29 October 2026
 
 Note: This release was created from the `support/10.x` branch.
