@@ -106,20 +106,20 @@ export class Component {
 /**
  * Component compatible class
  *
- * @template {typeof Component | typeof ConfigurableComponent} [ComponentType=typeof Component]
- * @typedef {{
+ * @template {new (...args: never[]) => Component} [ComponentType=typeof Component | typeof ConfigurableComponent<ObjectNested>]
+ * @typedef {ComponentType extends unknown ? {
  *   new(...args: ConstructorParameters<ComponentType>): InstanceType<ComponentType>,
- *   defaults?: ObjectNested,
+ *   defaults?: object,
  *   schema?: Schema<ObjectNested>,
  *   moduleName: string
- * }} CompatibleClass
+ * } : never} CompatibleClass
  */
 
 /**
  * Component constructor
  *
- * @template {typeof Component | typeof ConfigurableComponent} [ComponentType=typeof Component]
- * @typedef {CompatibleClass & ComponentType} ComponentConstructor
+ * @template {typeof Component | typeof ConfigurableComponent} [ComponentType=typeof Component | typeof ConfigurableComponent]
+ * @typedef {ComponentType extends unknown ? CompatibleClass<ComponentType> & ComponentType : never} ComponentConstructor
  */
 
 /**
