@@ -21,7 +21,7 @@ const gitignorePath = join(rootPath, '.gitignore')
 
 export default defineConfig([
   {
-    files: ['**/*.{cjs,js,mjs}'],
+    files: ['**/*.{cjs,js,mjs,mts}'],
     extends: [
       eslint.configs.recommended,
       pluginJsdoc.configs['flat/recommended-typescript-flavor'],
@@ -145,6 +145,7 @@ export default defineConfig([
     files: [
       'packages/nhsuk-frontend/src/**/*.mjs',
       'packages/nhsuk-frontend-review/src/javascripts/**/*.mjs',
+      'tests/types/*.mts',
       '**/*.md/*.{cjs,js,mjs}'
     ],
     ignores: [
